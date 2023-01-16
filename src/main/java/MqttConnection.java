@@ -22,7 +22,11 @@ public class MqttConnection {
         sensors.add("oximeters/9");
         sensors.add("oximeters/10");
         sensors.add("alerts/2");
-
+        /**
+         * MemoryPersistence is an implementation of the MqttClientPersistence interface.
+         * It stores the in-flight and pending messages in memory.
+         * It is useful for clients that do not need to persist the messages when the client disconnects.
+         */
         MemoryPersistence persistence = new MemoryPersistence();
 
         try {
